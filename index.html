@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Artistic Cup Shuffle — Polished</title>
+  <link rel="stylesheet" href="Suffle.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <h1>🎩 Cup Shuffle</h1>
+      <p class="subtitle">Find the hidden ball — watch carefully, then pick a cup.</p>
+    </header>
+
+    <div class="game-area" role="application" aria-label="Cup shuffle game">
+      <div class="top-row">
+        <div class="scoreboard" aria-live="polite">
+          <div class="score-row">
+            <div>
+              <div class="score-label">Score</div>
+              <div id="scoreVal" class="score-value">0</div>
+            </div>
+
+            <!-- Streak badge -->
+            <div class="streak-wrap" aria-hidden="true">
+              <div class="streak-badge" id="streakBadge" title="Current winning streak">
+                <svg class="streak-icon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 2l2.9 6.2L21 9l-5 3.7L17.8 20 12 16.8 6.2 20 8 12.7 3 9l6.1-.8z"/></svg>
+                <span id="streakVal">×0</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="score-row small">
+            <div class="score-item">
+              <div class="small-label">Wins</div>
+              <div id="winsVal" class="small-value">0</div>
+            </div>
+            <div class="score-item">
+              <div class="small-label">Rounds</div>
+              <div id="roundsVal" class="small-value">0</div>
+            </div>
+            <div class="score-item high">
+              <div class="small-label">High</div>
+              <div id="highVal" class="small-value">0</div>
+            </div>
+          </div>
+          <div class="score-actions">
+            <button id="resetScoreBtn" class="mini-btn">Reset Score</button>
+            <button id="resetHighBtn" class="mini-btn ghost">Reset High</button>
+          </div>
+        </div>
+
+        <div class="spacer"></div>
+      </div>
+
+      <div class="scene" id="scene">
+        <div class="spotlight"></div>
+        <div class="table" id="table" aria-hidden="false">
+          <div class="cup" data-index="0" id="cup0" aria-label="Cup 1"></div>
+          <div class="cup" data-index="1" id="cup1" aria-label="Cup 2"></div>
+          <div class="cup" data-index="2" id="cup2" aria-label="Cup 3"></div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="shuffleBtn" class="btn primary" aria-label="Shuffle cups" type="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          Shuffle
+        </button>
+        <button id="resetBtn" class="btn ghost" aria-label="Start new round" type="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12a9 9 0 10-8.95 8.999" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          New Round
+        </button>
+      </div>
+
+      <p id="message" class="message" aria-live="polite"></p>
+    </div>
+  </main>
+
+  <!-- Made by badge (small logo) -->
+  <a class="made-by" href="https://github.com/Vishal-singh2" target="_blank" rel="noopener noreferrer" aria-label="Made by vishalsingh">
+    <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" class="made-by__svg">
+      <defs>
+        <linearGradient id="g" x1="0" x2="1">
+          <stop offset="0" stop-color="#ffd57a"/>
+          <stop offset="1" stop-color="#ffb84d"/>
+        </linearGradient>
+      </defs>
+      <circle cx="12" cy="12" r="10" fill="url(#g)"></circle>
+      <text x="50%" y="52%" text-anchor="middle" font-size="10" font-weight="700" fill="#072018" dy=".3em">v</text>
+    </svg>
+    <span class="made-by__text">Made by vishalsingh</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
