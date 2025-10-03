@@ -42,7 +42,9 @@ A polished, touch-friendly web game with scoring, streaks, confetti, and a persi
 
 1. **Download the files**  
    - `index.html`
-   - `Suffle.css` (or the CSS file you saved)
+   - `Suffle.css`
+   - `script.js`
+   
 
 2. **Open locally**  
    Double-click `index.html` or serve the folder with a simple server.
